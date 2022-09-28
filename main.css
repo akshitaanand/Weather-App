@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: beige;
+}
+section {
+  height: 100vh;
+}
+
+.display-4{
+    color: rgb(60, 60, 180);
+    margin-bottom: 5%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.btn.btn-primary.mb-2{
+    background-color: rgb(60, 60, 180);
+}
+
+.section{
+    height: 100%;
+    margin: 5%;
+}
+
+.jumbotron{
+    margin: 0;
+}
+
+.container{
+    border-radius: 25px;
+    background:  rgb(60, 60, 180);
+    padding: 20px;
+    /* width: 25%; */
+    height: 100vh;
+    margin: 5%;
+}
+
+.mini-container{
+    border-radius: 25px;
+    background:  rgb(25, 25, 94);
+    padding: 10px;
+    margin: 5%;
+    text-align: center;
+}
+
+.right-align{
+    align-items: right;
+}
+
+.right-text{
+    text-align: right;
+}
+
+.center-align{
+    text-align: center;
+}
+
+.city-text{
+    size: 50px;
+    color: white;
+    text-align: center;
+}
+
+.weather-text{
+    size: 70px;
+    color: white;
+}
+
+.text-white{
+    color: white;
+}
+
+.list-group-item{
+    background-color: rgb(60, 60, 180);
+    color: white;
+}
+
+
+
