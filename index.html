@@ -15,11 +15,11 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-7">
                 <h1 class="display-4">Weather Forecast</h1>
-                <form class="form-inline">
+                <form class="form-inline" onsubmit="onSubmit()">
                     <div class="form-group mx-sm-3 mb-2">
                         <input type="text" class="form-control" id="city" placeholder="Enter City">
                     </div>
-                    <button id = "search" type="submit" class="btn btn-primary mb-2"><svg xmlns="http://www.w3.org/2000/svg"
+                    <button id = "submit" type="submit" class="btn btn-primary mb-2"><svg xmlns="http://www.w3.org/2000/svg"
                             width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
                             <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
                             <path
@@ -88,7 +88,8 @@
             </div>
             <div class="col-xs-6 col-md-5">
                 <div class="container">
-                    <h1 class="city-text">New York</h1>
+                    <h1 class="city-text" id = "today-city">New York</h1>
+                    <h4 class="city-text">Today</h4>
                     <div class="form-inline">
                         <lord-icon src="https://cdn.lordicon.com/tryuckbf.json" trigger="loop" delay="500"
                             colors="primary:#ffc738" style="width:70%;height:70%">
