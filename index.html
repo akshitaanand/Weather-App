@@ -15,25 +15,29 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-7">
                 <h1 class="display-4">Weather Forecast</h1>
-                <form class="form-inline" onsubmit="onSubmit()">
-                    <div class="form-group mx-sm-3 mb-2">
-                        <input type="text" class="form-control" id="city" placeholder="Enter City">
-                    </div>
-                    <button id="submit" type="submit" class="btn btn-primary mb-2"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-search-heart" viewBox="0 0 16 16">
-                            <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
-                            <path
-                                d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
-                        </svg> Search</button>
-                </form>
+                <div>
+                    <form class="mx-auto" onsubmit="onSubmit()">
+                        <div class="form-row">
+                            <div class="col-md-9 mb-3">
+                                <input type="text" class="form-control" id="city" placeholder="Enter City" autoComplete="home city">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <button id="submit" type="submit" class="btn btn-primary mb-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                                        <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+                                        <path
+                                            d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+                                    </svg> Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <hr>
                 <div class="row">
                     <div class="col-xs-6 col-sm-4">
                         <div class="mini-container">
-                            <h3 class="text-white" id='One'></h3>
                             <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
-                            <h4 class="text-white">Sunny</h4>
+                            <h4 class="text-white">Wind</h4>
                             <div class="text-white">
                                 <div>High: 80</div>
                                 <div>Low: 50</div>
@@ -42,9 +46,8 @@
                     </div>
                     <div class="col-xs-6 col-sm-4">
                         <div class="mini-container">
-                            <h3 class="text-white" id='Two'></h3>
                             <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
-                            <h4 class="text-white">Sunny</h4>
+                            <h4 class="text-white">Rain</h4>
                             <div class="text-white">
                                 <div>High: 80</div>
                                 <div>Low: 50</div>
@@ -53,9 +56,8 @@
                     </div>
                     <div class="col-xs-6 col-sm-4">
                         <div class="mini-container">
-                            <h3 class="text-white" id='Three'></h3>
                             <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
-                            <h4 class="text-white">Sunny</h4>
+                            <h4 class="text-white">Clouds</h4>
                             <div class="text-white">
                                 <div>High: 80</div>
                                 <div>Low: 50</div>
@@ -66,9 +68,8 @@
                 <div class="row">
                     <div class="col-xs-6 col-sm-4">
                         <div class="mini-container">
-                            <h3 class="text-white" id='Four'></h3>
                             <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
-                            <h4 class="text-white">Sunny</h4>
+                            <h4 class="text-white">High</h4>
                             <div class="text-white">
                                 <div>High: 80</div>
                                 <div>Low: 50</div>
@@ -77,9 +78,8 @@
                     </div>
                     <div class="col-xs-6 col-sm-4">
                         <div class="mini-container">
-                            <h3 class="text-white" id='Five'></h3>
                             <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
-                            <h4 class="text-white">Sunny</h4>
+                            <h4 class="text-white">Low</h4>
                             <div class="text-white">
                                 <div>High: 80</div>
                                 <div>Low: 50</div>
@@ -88,9 +88,8 @@
                     </div>
                     <div class="col-xs-6 col-sm-4">
                         <div class="mini-container">
-                            <h3 class="text-white" id='Six'></h3>
                             <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
-                            <h4 class="text-white">Sunny</h4>
+                            <h4 class="text-white">Pressure</h4>
                             <div class="text-white">
                                 <div>High: 80</div>
                                 <div>Low: 50</div>
@@ -115,8 +114,8 @@
                             <h2 class="city-text" id='temp'></h2>
                             <h4 class="city-text" id='desc'></h4>
                             <div class="city-text">
-                                <div>High: 80</div>
-                                <div>Low: 50</div>
+                                <div id="high"></div>
+                                <div id="low"></div>
                             </div>
                         </div>
                     </div>

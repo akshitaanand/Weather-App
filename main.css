@@ -4,16 +4,17 @@ html,
 body {
   height: 100%;
   margin: 0;
-  background-color: beige;
+  background-color:  rgb(25, 25, 94);
 }
 section {
   height: 100vh;
 }
 
 .display-4{
-    color: rgb(60, 60, 180);
+    color: white;
     margin-bottom: 5%;
     font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 
 .btn.btn-primary.mb-2{
@@ -33,14 +34,14 @@ section {
     border-radius: 25px;
     background:  rgb(60, 60, 180);
     padding: 20px;
-    /* width: 25%; */
     height: 100vh;
     margin: 5%;
+    text-align: center;
 }
 
 .mini-container{
     border-radius: 25px;
-    background:  rgb(25, 25, 94);
+    background:  rgb(42, 42, 98);
     padding: 10px;
     margin: 5%;
     text-align: center;
@@ -78,5 +79,11 @@ section {
     color: white;
 }
 
+
+.text-box{
+    width: 70%;
+    align-content: center;
+    display: inline-block
+}
 
 
