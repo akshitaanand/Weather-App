@@ -19,8 +19,9 @@
                     <div class="form-group mx-sm-3 mb-2">
                         <input type="text" class="form-control" id="city" placeholder="Enter City">
                     </div>
-                    <button id = "submit" type="submit" class="btn btn-primary mb-2"><svg xmlns="http://www.w3.org/2000/svg"
-                            width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                    <button id="submit" type="submit" class="btn btn-primary mb-2"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search-heart" viewBox="0 0 16 16">
                             <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
                             <path
                                 d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
@@ -28,74 +29,10 @@
                 </form>
                 <hr>
                 <div class="row">
-                    <div class="col-xs-6 col-sm-4"><div class = "mini-container">
-                        <h3 class = "text-white">Monday</h3>
-                        <a><img src = "http://openweathermap.org/img/wn/10d@4x.png"></a>
-                        <h4 class="text-white">Sunny</h4>
-                        <div class="text-white">
-                            <div>High: 80</div>
-                            <div>Low: 50</div>
-                        </div>
-                    </div></div>
-                    <div class="col-xs-6 col-sm-4"><div class = "mini-container">
-                        <h3 class = "text-white">Monday</h3>
-                        <a><img src = "http://openweathermap.org/img/wn/10d@4x.png"></a>
-                        <h4 class="text-white">Sunny</h4>
-                        <div class="text-white">
-                            <div>High: 80</div>
-                            <div>Low: 50</div>
-                        </div>
-                    </div></div>
-                    <div class="col-xs-6 col-sm-4"><div class = "mini-container">
-                        <h3 class = "text-white">Monday</h3>
-                        <a><img src = "http://openweathermap.org/img/wn/10d@4x.png"></a>
-                        <h4 class="text-white">Sunny</h4>
-                        <div class="text-white">
-                            <div>High: 80</div>
-                            <div>Low: 50</div>
-                        </div>
-                    </div></div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-6 col-sm-4"><div class = "mini-container">
-                        <h3 class = "text-white">Monday</h3>
-                        <a><img src = "http://openweathermap.org/img/wn/10d@4x.png"></a>
-                        <h4 class="text-white">Sunny</h4>
-                        <div class="text-white">
-                            <div>High: 80</div>
-                            <div>Low: 50</div>
-                        </div>
-                    </div></div>
-                    <div class="col-xs-6 col-sm-4"><div class = "mini-container">
-                        <h3 class = "text-white">Monday</h3>
-                        <a><img src = "http://openweathermap.org/img/wn/10d@4x.png"></a>
-                        <h4 class="text-white">Sunny</h4>
-                        <div class="text-white">
-                            <div>High: 80</div>
-                            <div>Low: 50</div>
-                        </div>
-                    </div></div>
-                    <div class="col-xs-6 col-sm-4"><div class = "mini-container">
-                        <h3 class = "text-white">Monday</h3>
-                        <a><img src = "http://openweathermap.org/img/wn/10d@4x.png"></a>
-                        <h4 class="text-white">Sunny</h4>
-                        <div class="text-white">
-                            <div>High: 80</div>
-                            <div>Low: 50</div>
-                        </div>
-                    </div></div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-5">
-                <div class="container">
-                    <h1 class="city-text" id = "today-city">New York</h1>
-                    <h4 class="city-text">Today</h4>
-                    <div class="form-inline">
-                        <lord-icon src="https://cdn.lordicon.com/tryuckbf.json" trigger="loop" delay="500"
-                            colors="primary:#ffc738" style="width:70%;height:70%">
-                        </lord-icon>
-                        <div class="center-align">
-                            <h1 class="weather-text">75 F</h1>
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="mini-container">
+                            <h3 class="text-white" id='One'></h3>
+                            <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
                             <h4 class="text-white">Sunny</h4>
                             <div class="text-white">
                                 <div>High: 80</div>
@@ -103,20 +40,87 @@
                             </div>
                         </div>
                     </div>
-                    <div class = "time">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="right-text">
-                                    <div>2pm</div>
-                                    <div>lll</div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">3pm</li>
-                            <li class="list-group-item">4pm</li>
-                            <li class="list-group-item">5pm</li>
-                            <li class="list-group-item">6pm</li>
-                          </ul>
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="mini-container">
+                            <h3 class="text-white" id='Two'></h3>
+                            <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
+                            <h4 class="text-white">Sunny</h4>
+                            <div class="text-white">
+                                <div>High: 80</div>
+                                <div>Low: 50</div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="mini-container">
+                            <h3 class="text-white" id='Three'></h3>
+                            <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
+                            <h4 class="text-white">Sunny</h4>
+                            <div class="text-white">
+                                <div>High: 80</div>
+                                <div>Low: 50</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="mini-container">
+                            <h3 class="text-white" id='Four'></h3>
+                            <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
+                            <h4 class="text-white">Sunny</h4>
+                            <div class="text-white">
+                                <div>High: 80</div>
+                                <div>Low: 50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="mini-container">
+                            <h3 class="text-white" id='Five'></h3>
+                            <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
+                            <h4 class="text-white">Sunny</h4>
+                            <div class="text-white">
+                                <div>High: 80</div>
+                                <div>Low: 50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="mini-container">
+                            <h3 class="text-white" id='Six'></h3>
+                            <a><img src="http://openweathermap.org/img/wn/10d@4x.png"></a>
+                            <h4 class="text-white">Sunny</h4>
+                            <div class="text-white">
+                                <div>High: 80</div>
+                                <div>Low: 50</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-5">
+                <div class="container">
+                    <h1 class="city-text" id="today-city">New York</h1>
+                    <h4 class="city-text">Today</h4>
+                    <div>
+                        <!-- <lord-icon src="https://cdn.lordicon.com/tryuckbf.json" trigger="loop" delay="500"
+                            colors="primary:#ffc738" style="width:70%;height:70%">
+                        </lord-icon> -->
+                        <!-- <lord-icon src="https://cdn.lordicon.com/qrodhbts.json" trigger="hover"
+                            style="width:70%;height:70%">
+                        </lord-icon> -->
+                        <a><img style="width:90%;height:90%" src="./images/cloudy.gif"></a>
+                        <div class="center-align">
+                            <h2 class="city-text" id='temp'></h2>
+                            <h4 class="city-text" id='desc'></h4>
+                            <div class="city-text">
+                                <div>High: 80</div>
+                                <div>Low: 50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="city-text" id="date"></h6>
                 </div>
             </div>
         </div>
@@ -131,6 +135,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     <script src="app.js"></script>
 </body>
 
