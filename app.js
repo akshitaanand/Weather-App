@@ -8,13 +8,82 @@ const d = new Date().toLocaleString();
 document.getElementById("date").innerHTML = d;
 
 
-const cities = async () => {
-    const req = await fetch('https://countriesnow.space/api/v0.1/cities')
-    const cts = await req.json()
-    console.log(cts)
+const country = async () => {
+    const req = await fetch('https://countriesnow.space/api/v0.1/countries/states')
+    const countryList = await req.json()
+    console.log(countryList)
+    countryOptions(countryList.data, "country-select")
 }
 
-cities()
+const countryOptions = (list, dropdown) => {
+    for(var i = 0; i<list.length; i++){
+        let option = document.createElement("option")
+        option.innerHTML = list[i].name
+        document.getElementById(dropdown).appendChild(option)
+    }
+}
+
+const cityOptions = (list) => {
+    for(var i = 0; i<list.length; i++){
+        let option = document.createElement("option")
+        option.innerHTML = list[i]
+        document.getElementById("city-select").appendChild(option)
+    }
+}
+
+country()
+
+localStorage.setItem('country', '');
+localStorage.setItem('state', '');
+localStorage.setItem('city-select', '');
+
+document.getElementById("country-select").addEventListener("change", function(){
+    console.log(this.value)
+    localStorage.setItem('country', this.value);
+    let items = document.getElementById('state-select');
+    items.innerHTML = '';
+    state(this.value)
+})
+
+document.getElementById("state-select").addEventListener("change", function(){
+    console.log(this.value)
+    localStorage.setItem('state', this.value)
+    city(localStorage.getItem('country'), localStorage.getItem('state'))
+    let items = document.getElementById('city-select');
+    items.innerHTML = '';
+})
+
+document.getElementById("city-select").addEventListener("change", function(){
+    console.log(this.value)
+    localStorage.setItem('city-select', this.value)
+})
+
+const state = async (country) => {
+    const req = await fetch('https://countriesnow.space/api/v0.1/countries/states', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify( {country: country} )  
+    })
+    const stateList = await req.json()
+    console.log(stateList)
+    localStorage.setItem("iso3", stateList.data.iso3)
+    countryOptions(stateList.data.states, "state-select")
+}
+
+const city = async (country, state) => {
+    const req = await fetch('https://countriesnow.space/api/v0.1/countries/state/cities', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify( {country: country, state: state} )  
+    })
+    const cityList = await req.json()
+    console.log(cityList)
+    cityOptions(cityList.data)
+}
 
 const getWeather = async (lat, lon) => {
     let url = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=7a012072942605e74e1d8edb38dacd5b"
@@ -59,10 +128,10 @@ const displayWeather = async (lat, lon) => {
     })
 }
 
-//displayWeather(32.779167, -96.808891)
+displayWeather(32.779167, -96.808891)
 
-const getCoordinates = async (city) => {
-    let url = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=7a012072942605e74e1d8edb38dacd5b"
+const getCoordinates = async (city, countryCode) => {
+    let url = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + ", " + countryCode + "&limit=1&appid=7a012072942605e74e1d8edb38dacd5b"
     const request = await fetch(url)
     const data = await request.json()
     return data;
@@ -72,12 +141,13 @@ document.getElementById("submit").onclick = onSubmit;
 
 async function onSubmit(event) {
     event.preventDefault()
-    var city = document.getElementById('city').value
+    //var city = document.getElementById('city').value
+    var city = localStorage.getItem('city-select')
     localStorage.setItem('city', city);
-    document.getElementById('today-city').innerHTML = localStorage.getItem('city')
-    console.log(city)
+    document.getElementById('today-city').innerHTML = localStorage.getItem('city-select')
 
-    let coord = await getCoordinates(city)
+    let coord = await getCoordinates(city, localStorage.getItem("iso3"))
+    console.log(city + localStorage.getItem("iso3"))
     await displayWeather(coord[0].lat, coord[0].lon)
 }
 
@@ -100,16 +170,6 @@ function timeConverter(UNIX_timestamp){
     return time;
   }
 
-//   $('.basicAutoComplete').autoComplete({
-//     resolverSettings: {
-//         url: [
-//             "Google Cloud Platform",
-//             "Amazon AWS",
-//             "Docker",
-//             "Digital Ocean"
-//         ]
-//     }
-// });
 
 
 

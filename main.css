@@ -19,6 +19,8 @@ section {
 
 .btn.btn-primary.mb-2{
     background-color: rgb(60, 60, 180);
+    width: 100%;
+    margin-top: 4%;
 }
 
 .section{
@@ -95,4 +97,18 @@ section {
 .margin-top{
     margin-top: 15%;
     color: white;
+}
+
+.scroll{
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+.info-select{
+    width: 50%;
+}
+
+.col-md-12{
+    margin-top: 2%;
 }
