@@ -65,6 +65,12 @@ section {
     text-align: center;
 }
 
+.temp-text{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
 .weather-text{
     size: 70px;
     color: white;
@@ -86,4 +92,7 @@ section {
     display: inline-block
 }
 
-
+.margin-top{
+    margin-top: 15%;
+    color: white;
+}
