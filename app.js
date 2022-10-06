@@ -134,7 +134,7 @@ const displayWeather = async (lat, lon) => {
     })
 }
 
-displayWeather(32.779167, -96.808891)
+//displayWeather(32.779167, -96.808891)
 
 const getCoordinates = async (city, countryCode) => {
     let url = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + ", " + countryCode + "&limit=1&appid=7a012072942605e74e1d8edb38dacd5b"
