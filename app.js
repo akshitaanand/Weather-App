@@ -1,5 +1,4 @@
 'use strict';
-const API_KEY = process.env.API_KEY;
 
 localStorage.setItem('city', 'Dallas');
 
