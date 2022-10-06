@@ -22,18 +22,23 @@
                                 <!-- <input type="text" id="city" placeholder="Enter City" class="form-control basicAutoComplete" autocomplete="off"> -->
                                 <label class = "text-white">Select Country</label>
                                 <select class="form-control scroll" id="country-select">
-                                </select>
+                                    <option>Choose a Country</option>
+                                </select required>
+                                <div id = "no-country" style = "color: red;"></div>
                             </div>
                             <div class="col-md-12">
                                 <!-- <input type="text" id="city" placeholder="Enter City" class="form-control basicAutoComplete" autocomplete="off"> -->
                                 <label class = "text-white">Select State</label>
                                 <select class="form-control scroll" id="state-select">
+                                    <option>Choose a State</option>
                                 </select>
+                                <div id = "no-state" style = "color: red;"></div>
                             </div>
                             <div class="col-md-12">
                                 <!-- <input type="text" id="city" placeholder="Enter City" class="form-control basicAutoComplete" autocomplete="off"> -->
                                 <label class = "text-white">Select City</label>
                                 <select class="form-control scroll" id="city-select">
+                                    <option>Choose a City</option>
                                 </select>
                             </div>
                         </div>
@@ -141,7 +146,7 @@
             </div>
             <div class="col-xs-6 col-md-5">
                 <div class="container">
-                    <h1 class="city-text" id="today-city">New York</h1>
+                    <h1 class="city-text" id="today-city"></h1>
                     <h4 class="city-text">Today</h4>
                     <h5 class="city-text" id="date"></h5>
                     <div>
