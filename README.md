@@ -11,7 +11,6 @@
 ### .images: contains images used
 ### main.css: styling sheet
 ### app.js: javascript file for creating logic and functionality for users and displaying data from apis
-# 
-index.html: html code for web app
+### index.html: html code for web app
 
 
