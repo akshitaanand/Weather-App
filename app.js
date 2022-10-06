@@ -93,7 +93,7 @@ const city = async (country, state) => {
 }
 
 const getWeather = async (lat, lon) => {
-    let url = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + API_KEY
+    let url = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=7a012072942605e74e1d8edb38dacd5b" 
     const request = await fetch(url);
     const data = await request.json();
     return data;
@@ -138,7 +138,7 @@ const displayWeather = async (lat, lon) => {
 displayWeather(32.779167, -96.808891)
 
 const getCoordinates = async (city, countryCode) => {
-    let url = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + ", " + countryCode + "&limit=1&appid=" + API_KEY
+    let url = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + ", " + countryCode + "&limit=1&appid=7a012072942605e74e1d8edb38dacd5b" 
     const request = await fetch(url)
     const data = await request.json()
     return data;
